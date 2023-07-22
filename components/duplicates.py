@@ -88,12 +88,8 @@ def print_results(dict1):
 
 
 def find_duplicates(dir):
-    # parser = argparse.ArgumentParser(description='Find duplicate files')
-    # parser.add_argument('folders', metavar='dir', type=str, nargs='+',help='A directory to parse for duplicates',)
-    # args = parser.parse_args()
     # dir=input("Enter the directory names to find for duplicates: ").split(" ")
     a= duplicates([dir])
-    print(a)
     return a
 
 def remove_duplicates(dups):

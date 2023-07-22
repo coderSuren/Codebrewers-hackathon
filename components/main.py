@@ -1,14 +1,10 @@
 import os
 import sys
 
-# import python modules from 'files' folder in current directory
-
-from . import duplicates as duplicates
-
-# import Scanner.duplicates as duplicates
-# import Scanner.diskutil as diskutil
-# import Scanner.largefiles as largefiles
-
+import duplicates
+import largefiles
+import diskutil
+import infrequent
 
 # create a class file that  imports functions from inported files and returns them in seperate functions
 
@@ -22,9 +18,17 @@ class Scanner:
     def remove_duplicates(self, folders):
         return duplicates.remove_duplicates(folders)
     
-    # def find_large_files(self, folder, min_size):
-    #     return largefiles.find_files(folder, min_size)
+    def find_large_files(self, folder):
+        return largefiles.find_large_files(folder)
 
-    # def find_disk_utilization(self, folder):
-    #     return diskutil.show_disk_util(folder)
+    def find_disk_utilization(self):
+        return diskutil.get_disk_usage()
     
+    def find_file_usage(self, folder):
+        return diskutil.get_file_usage(folder)
+    
+    def show_infrequent_files(self, folder):
+        return infrequent.infrequent_files(folder)
+    
+    def delete_infrequent_files(self, files):
+        return infrequent.delete_infrequent_files(files)
