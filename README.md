@@ -19,7 +19,7 @@ Welcome to Disk Space Management App! This Python application is built using the
 Explore the application by downloading and running the [gui.exe](https://github.com/coderSuren/Codebrewers-hackathon/releases/tag/v1.0.0)
 
 ## Features
-It uses the XXH32 hashing algorithm to achieve faster performance and facilitate duplicate retrieval.
+It uses the xxHash hashing algorithm to achieve faster performance and facilitate duplicate retrieval.
 
 ### Comparison of different hashing algorithms:
 ![Alt text](assets/image.png)
