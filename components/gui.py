@@ -2,14 +2,14 @@ import tkinter as tk
 import customtkinter
 import os
 from PIL import Image
-import main
+import scan
 
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
-        self.scanner = main.Scanner()
-        image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "")
-        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "../assets/icon.png")), size=(26, 26))
+        self.scanner = scan.Scanner()
+        # image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "")
+        # self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "../assets/icon.png")), size=(26, 26))
 
         self.title("Disk Space Manager")
         self.geometry("700x700")
@@ -22,7 +22,7 @@ class App(customtkinter.CTk):
         self.navigation_frame.grid(row=0, column=0, sticky="nsew")
         self.navigation_frame.grid_rowconfigure(6, weight=1)
 
-        self.navigation_frame_label = customtkinter.CTkLabel(self.navigation_frame, text="Disk Space Manager",  image=self.logo_image,
+        self.navigation_frame_label = customtkinter.CTkLabel(self.navigation_frame, text="Disk Space Manager",
                                                              compound="left", font=customtkinter.CTkFont(size=15, weight="bold"))
         self.navigation_frame_label.grid(row=0, column=0, padx=20, pady=20)
 
