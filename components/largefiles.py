@@ -1,14 +1,15 @@
 import os
+from convert import convert_bytes
 
-def find_large_files(path):
-    # path=input("Enter the directory name to find large files: ")
+def find_large_files(path, file_size_limit):
+    limit=file_size_limit*1024*1024
     ans=[]
     if os.path.exists(path):
         for foldername, subfolders, filenames in os.walk(path):
             for filename in filenames:
                 size=os.path.getsize(os.path.join(foldername, filename))
-                if size>100000000: # 100 MB
-                    ans.append([foldername + '\\' + filename, size])
+                if size>limit: 
+                    ans.append([foldername + '\\' + filename, convert_bytes(size)])
                     
         return ans
     else:

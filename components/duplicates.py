@@ -1,7 +1,10 @@
 import os
 import sys
-import hashlib
 
+from hashlib import md5, blake2b, sha1, sha256, sha512, sha3_256, sha3_512, shake_128, shake_256
+from xxhash import xxh64, xxh128, xxh3_64, xxh3_128
+
+hashfunc="md5"
 
 def duplicates(folders):
     dup_size = {}
@@ -62,7 +65,38 @@ def join_dicts(dict1, dict2):
 
 def hashfile(path, blocksize=65536):
     file = open(path, 'rb')
-    hasher = hashlib.md5()
+    hasher = ""
+    match hashfunc:
+        case "md5":  
+            hasher = md5()
+        case "sha1":
+            hasher = sha1()
+        case "blake2b":
+            hasher = blake2b()
+        case "sha256":
+            hasher = sha256()
+        case "sha512":
+            hasher = sha512()
+        case "sha3_256":
+            hasher = sha3_256()
+        case "sha3_512":
+            hasher = sha3_512()
+        case "shake_128":
+            hasher = shake_128()
+        case "shake_256":
+            hasher = shake_256()
+        case "xxh64":
+            hasher = xxh64()
+        case "xxh128":
+            hasher = xxh128()
+        case "xxh3_64":
+            hasher = xxh3_64()
+        case "xxh3_128":
+            hasher = xxh3_128()
+        case _:
+            print("Invalid hash function")
+            sys.exit(1)
+    
     buf = file.read(blocksize)
     while len(buf) > 0:
         hasher.update(buf)
@@ -87,8 +121,11 @@ def print_results(dict1):
         print('No duplicate files found.')
 
 
-def find_duplicates(dir):
+def find_duplicates(dir, func):
     # dir=input("Enter the directory names to find for duplicates: ").split(" ")
+    global hashfunc 
+    hashfunc = func
+    print(hashfunc)
     a= duplicates([dir])
     return a
 
