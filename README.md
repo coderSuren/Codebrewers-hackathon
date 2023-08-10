@@ -6,6 +6,7 @@
 - [Quick Demo](#quick-demo) 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Snapshots](#app-interface-snapshots)
 - [License](#license)
 
 ## Introduction
@@ -65,8 +66,8 @@ Follow these steps to set up and run the application:
    - Click on the "Get Infrequent Files" button to start the scanning process.
    - After the scan is complete, a list of duplicate files will be displayed with options to delete them.
    - Customize the File accessed time range in the settings menu
-   
-## Screenshots
+
+## App interface snapshots
 |Duplicate Files Detector|Disk Utilization (By Drive)|
 |:-------:|:-------:|
 |![image](https://github.com/coderSuren/Codebrewers-hackathon/assets/80509210/44deda1e-6254-4a5f-a81d-4e4017b10424)|![image](https://github.com/coderSuren/Codebrewers-hackathon/assets/80509210/1dd6005d-d109-4ca3-995e-1115e92f4e2d)|
