@@ -1,7 +1,6 @@
-# Codebrewers-hackathon
-
+# Tally's Codebrewers hackathon
+## Theme - Wizard of System Programming
 # Disk Space Manager 
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Quick Demo](#quick-demo) 
@@ -14,7 +13,7 @@
 Welcome to Disk Space Management App! This Python application is built using the Tkinter library and provides a user-friendly interface to scan for duplicate files and manage system memory efficiently. With this app, you can quickly locate and remove duplicate files, freeing up infrequently accessed files, and viewing disk memory utilization based on drive, directory, file types, etc.
 
 ## Quick Demo
-Explore the application by downloading and running the [gui.exe](https://github.com/coderSuren/Codebrewers-hackathon/releases/tag/v1.0.1)
+Explore the application by running the [gui.exe](https://github.com/coderSuren/Codebrewers-hackathon/releases/tag/v1.0.1) file
   
 ## Installation
 
@@ -26,7 +25,7 @@ Follow these steps to set up and run the application:
    git clone https://github.com/coderSuren/Codebrewers-hackathon.git
    cd Codebrewers-hackathon
    ```
-2. Make sure you have Python 3.x installed on your system. If not, download and install it from [Python's official website](https://www.python.org/downloads/).
+2. Ensure you have Python 3.x installed on your system. If not, download and install it from [Python's official website](https://www.python.org/downloads/).
 
 3. Install the required dependencies:
 
@@ -51,8 +50,8 @@ Follow these steps to set up and run the application:
    - After the scan is complete, a list of duplicate files will be displayed with options to delete them.
    - Customize scan options (hashing algorithms) in the settings menu as needed.
 
-2. **Disk Utilization By Drive, File Type**
-   - Click on the "Get Disk Utilization" button to start the scanning disk.
+2. **Disk Utilization By Drive, Path, File Type**
+   - Start the disk scanning by clicking the "Get Disk Utilization" button.
    - After the scan is complete, a list of drives with utilization will be displayed.
 
 3. **Large Files Detector**
@@ -65,7 +64,8 @@ Follow these steps to set up and run the application:
    - Select the directory or drive you want to scan for infrequent files.
    - Click on the "Get Infrequent Files" button to start the scanning process.
    - After the scan is complete, a list of duplicate files will be displayed with options to delete them.
-   - Customize the File access time limit in the settings menu
+   - Customize the File accessed time range in the settings menu
+   
 ## Screenshots
 |Duplicate Files Detector|Disk Utilization (By Drive)|
 |:-------:|:-------:|
